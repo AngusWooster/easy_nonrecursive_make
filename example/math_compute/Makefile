@@ -1,4 +1,4 @@
-TARGET := sub_compute
+TARGET := math_compute
 CC ?=
 CF_ALL ?=
 CFLAGS = -I../../inc

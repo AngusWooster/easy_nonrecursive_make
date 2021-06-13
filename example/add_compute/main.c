@@ -1,15 +1,10 @@
 #include <stdio.h>
+#include "add.h"
 
-#include "3.h"
-
-#define STR1(x) #x
-#define STR(x) STR1(x)
-
-#define TEST(x) x
-
-int main(void)
+int main(int argc, char *argv[])
 {
-    printf("addr f3(%p)\n", f3);
-    printf("mr -f "STR(ANGUS)"\n");
+    int x = 5, y = 3;
+    printf("example: %s\n", argv[0]);
+    printf("%d + %d = %d\n", x, y, add(x, y));
     return 0;
 }

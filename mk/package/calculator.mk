@@ -3,12 +3,12 @@ project:=calculator
 target_$(project)_libs:= $(DIR_REL_LIB)/lib$(project).so
 
 
-examples := sub_compute
-examples_$(project) := $(addprefix example/,$(examples))
-
+target_examples := sub_compute add_compute math_compute
+target_example_dir := $(DIR_REL)/example
+export CC CF_ALL target_example_dir target_examples
 .PHONY: target_$(project)_examples
 target_$(project)_examples:
-	@cp -r example $(DIR_REL)/example
+	@cp -r example $(target_example_dir)
 	$(MAKE) -f examples.mk
 
 
